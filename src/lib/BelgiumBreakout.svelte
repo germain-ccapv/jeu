@@ -33,7 +33,7 @@
     const rankByNis = new Map(
       [...features]
         .sort((a, b) => (b.properties?.population ?? 0) - (a.properties?.population ?? 0))
-        .map((f, i) => [String(f.properties?.nis), i + 1])
+        .map((f, i) => [String(f.properties?.id), i + 1])
     );
 
     const initialBricks = features
@@ -46,7 +46,7 @@
         const pop = f.properties?.population ?? 0;
         const name = f.properties?.name_fr ?? f.properties?.name_nl ?? '?';
         return {
-          id: String(f.properties?.nis ?? name),
+          id: String(f.properties?.id ?? name),
           x: x + 0.9,
           y: y + 0.9,
           w: Math.max(1, w - 1.8),
@@ -55,7 +55,7 @@
           cy: y + h / 2,
           name,
           pop,
-          rank: rankByNis.get(String(f.properties?.nis)) ?? 0,
+          rank: rankByNis.get(String(f.properties?.id)) ?? 0,
           alive: true
         };
       })
