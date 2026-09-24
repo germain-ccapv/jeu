@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-  <title>Belgium Breakout — un jeu d3-geo</title>
-  <meta name="description" content="Casse-briques basé sur les communes de Belgique, en d3-geo." />
+  <title>CCAPV Breakout — un jeu d3-geo</title>
+  <meta name="description" content="Casse-briques basé sur les communes de la CCAPV, en d3-geo." />
 </svelte:head>
 
 <main>
