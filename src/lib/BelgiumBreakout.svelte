@@ -10,7 +10,7 @@
 
   initPym();
 
-  const W = 700;
+  const W = 800;
   const H = 900;
   const WALL = 6;
   const ASPECT = W / H;
@@ -482,7 +482,7 @@
 <div class="game" bind:this={rootEl}>
   <header class="hud" bind:this={hudEl}>
     <div class="title">
-      <h1>Belgium Breakout</h1>
+      <h1>CCAPV Breakout</h1>
       <div class="legend" aria-hidden="true">
         <span class="legend-label">Population</span>
         <span class="swatches">
@@ -512,7 +512,7 @@
         <span class="bar" title="Communes libérées">
           <span class="fill" style:width={`${pct}%`}></span>
         </span>
-        <span class="bar pop" title="Part de la population belge libérée">
+        <span class="bar pop" title="Part de la population CCAPV libérée">
           <span class="fill" style:width={`${popPct}%`}></span>
         </span>
       </div>
@@ -548,7 +548,7 @@
         height={boardH}
         viewBox={`0 0 ${W} ${H}`}
         role="application"
-        aria-label="Belgium Breakout"
+        aria-label="CCAPV Breakout"
         ontouchmove={onTouchMove}
       >
         <defs>
@@ -652,9 +652,9 @@
       {/if}
       {#if phase === 'won'}
         <div class="result-overlay">
-          <span class="result-title win">Belgique libérée !</span>
+          <span class="result-title win">CCAPV libérée !</span>
           <span class="result-sub">Score final : {fmt.format(score)}</span>
-          <span class="result-line">Tu as libéré {fmt.format(totalBricks)} communes — toute la Belgique.</span>
+          <span class="result-line">Tu as libéré {fmt.format(totalBricks)} communes — toute la CCAPV.</span>
           <span class="result-line">
             {fmt.format(totalPop)} habitants{#if mode === 'objective'}{' · '}{missionsDone} objectif{missionsDone > 1 ? 's' : ''} accompli{missionsDone > 1 ? 's' : ''}{/if}
           </span>
@@ -667,7 +667,7 @@
           <span class="result-title lose">Partie terminée</span>
           <span class="result-sub">{fmt.format(score)} points</span>
           <span class="result-line">{freedCount} communes libérées sur {totalBricks} ({pct}%)</span>
-          <span class="result-line">{popPct}% de la population belge libérée</span>
+          <span class="result-line">{popPct}% de la population CCAPV libérée</span>
           {#if mode === 'objective'}
             <span class="result-line">{missionsDone} objectif{missionsDone > 1 ? 's' : ''} accompli{missionsDone > 1 ? 's' : ''}</span>
           {/if}
@@ -677,7 +677,7 @@
       {#if phase === 'ready' && !mode}
 
         <div class="start">
-          <h2 class="start-title">Belgium Breakout</h2>
+          <h2 class="start-title">CCAPV Breakout</h2>
           <p class="start-sub">Choisis ton mode de jeu</p>
           <div class="modes">
             <button class="mode-card" onclick={() => chooseMode('free')}>
@@ -774,7 +774,7 @@
       <strong>{destroyed[0].name}</strong>
       libérée · {fmt.format(destroyed[0].pop)} hab.{#if destroyed[0].rank <= 10} · <strong>{destroyed[0].rank}ᵉ</strong> commune la plus peuplée{/if} · +{fmt.format(destroyed[0].points)} pts
     {:else}
-      Vise Anvers et Bruxelles — les grandes villes valent le plus de points.
+      Vise St André et Castellane — les grandes villes valent le plus de points.
     {/if}
   </p>
 </div>
