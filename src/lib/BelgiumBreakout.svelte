@@ -622,9 +622,9 @@
           {/each}
           <g class="ball" transform={`translate(${ball.x},${ball.y})`}>
             <g clip-path="url(#ballClip)">
-              <rect x={-R} y={-R} width={(2 * R) / 3} height={2 * R} fill="#2d2926" />
-              <rect x={-R / 3} y={-R} width={(2 * R) / 3} height={2 * R} fill="#fae042" />
-              <rect x={R / 3} y={-R} width={(2 * R) / 3} height={2 * R} fill="#ed2939" />
+              <rect x={-R} y={-R} width={(2 * R) / 3} height={2 * R} fill="#00A3A6" />
+              <rect x={-R / 3} y={-R} width={(2 * R) / 3} height={2 * R} fill="#954b97" />
+              <rect x={R / 3} y={-R} width={(2 * R) / 3} height={2 * R} fill="#fdd600" />
               <circle cx="0" cy="0" r={R} fill="url(#ballGloss)" />
             </g>
             <circle cx="0" cy="0" r={R} fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="0.8" />
