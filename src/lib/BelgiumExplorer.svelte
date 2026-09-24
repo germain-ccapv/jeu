@@ -106,7 +106,7 @@
   </header>
 
   <div class="stage">
-    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet" role="img" aria-label="Carte des communes de Belgique">
+    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet" role="img" aria-label="Carte des communes de la CCAPV">
       {#each cells as c (c.id)}
         <path
           d={c.d}
