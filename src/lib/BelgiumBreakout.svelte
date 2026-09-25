@@ -11,7 +11,7 @@
   initPym();
 
   const W = 800;
-  const H = 900;
+  const H = 700;
   const WALL = 6;
   const ASPECT = W / H;
 
