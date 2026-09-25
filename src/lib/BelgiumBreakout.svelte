@@ -11,7 +11,7 @@
   initPym();
 
   const W = 800;
-  const H = 700;
+  const H = 800;
   const WALL = 6;
   const ASPECT = W / H;
 
@@ -23,8 +23,8 @@
 
     const projection = geoMercator().fitExtent(
       [
-        [WALL + 10, 56],
-        [W - WALL - 10, H - 210]
+        [WALL + 5, 56],
+        [W - WALL - 5, H - 210]
       ],
       geojson
     );
